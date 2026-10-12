@@ -3,159 +3,198 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Irina | Desarrolladora Frontend</title>
-  <meta name="description" content="Portafolio de Irina, tecnóloga en desarrollo de software. HTML, CSS, JavaScript y diseño responsive.">
+  <title>Liz Irina Llinin | Desarrolladora Frontend</title>
+  <meta name="description" content="Portafolio de Liz Irina Llinin, desarrolladora frontend: interfaces responsive con HTML, CSS, JavaScript, Angular y React, publicación de sitios y servidores con Nginx.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --fondo: #F2F5F9;
-      --tinta: #16213A;
-      --suave: #4B5873;
-      --linea: #CBD3E1;
-      --acento: #1F4FD8;
-      --acento-fondo: #E4EBFB;
-      --titulos: "Bricolage Grotesque", "Segoe UI", Arial, sans-serif;
-      --texto: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+      --papel: #FFFFFF;
+      --panel: #F4F6F7;
+      --tinta: #1B2A33;
+      --suave: #51606B;
+      --linea: #D5DBE0;
+      --acento: #0F5A62;
+      --acento-oscuro: #0A4147;
+      --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+      --sans: "IBM Plex Sans", "Segoe UI", Arial, sans-serif;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body {
-      margin: 0; background: var(--fondo); color: var(--tinta);
-      font-family: var(--texto); font-size: 1.0625rem; line-height: 1.6;
-    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body { margin: 0; background: var(--papel); color: var(--tinta); font-family: var(--sans); font-size: 1.03rem; line-height: 1.65; }
     a { color: var(--acento); }
-    a:focus-visible, button:focus-visible { outline: 3px solid var(--acento); outline-offset: 3px; border-radius: 4px; }
-    .contenedor { max-width: 52rem; margin: 0 auto; padding: 0 1.25rem; }
+    a:focus-visible { outline: 3px solid var(--acento); outline-offset: 3px; border-radius: 3px; }
+    .caja { max-width: 54rem; margin: 0 auto; padding: 0 1.25rem; }
 
-    header { padding: 1.25rem 0; border-bottom: 1px solid var(--linea); }
-    nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; align-items: center; justify-content: space-between; }
-    nav strong { font-family: var(--titulos); font-size: 1.15rem; }
-    nav ul { display: flex; gap: 1.25rem; list-style: none; margin: 0; padding: 0; }
-    nav a { color: var(--suave); text-decoration: none; font-weight: 600; }
-    nav a:hover { color: var(--acento); }
+    header { border-bottom: 1px solid var(--linea); }
+    header .caja { display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; align-items: center; justify-content: space-between; padding-top: 1rem; padding-bottom: 1rem; }
+    header strong { font-family: var(--serif); font-size: 1.1rem; }
+    header ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1.4rem; list-style: none; margin: 0; padding: 0; }
+    header a { color: var(--suave); text-decoration: none; font-weight: 500; }
+    header a:hover { color: var(--acento); text-decoration: underline; }
 
-    .hero { padding: 4.5rem 0 3.5rem; }
-    .hero h1 {
-      font-family: var(--titulos); font-weight: 800;
-      font-size: clamp(2.6rem, 9vw, 5.5rem); line-height: 1; letter-spacing: -0.03em; margin: 0 0 1.5rem;
-    }
-    .hero p { font-size: 1.25rem; max-width: 36rem; color: var(--suave); margin: 0 0 2rem; }
-    .botones { display: flex; flex-wrap: wrap; gap: 0.75rem; }
-    .btn {
-      display: inline-block; padding: 0.8rem 1.4rem; border-radius: 0.5rem;
-      font-weight: 600; text-decoration: none; border: 2px solid var(--acento);
-    }
-    .btn-principal { background: var(--acento); color: #fff; }
-    .btn-principal:hover { background: #173CAB; border-color: #173CAB; }
-    .btn-secundario { color: var(--acento); }
-    .btn-secundario:hover { background: var(--acento-fondo); }
+    .portada { padding: 4rem 0 3.5rem; }
+    .portada h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(2.3rem, 7vw, 3.9rem); line-height: 1.08; letter-spacing: -0.015em; margin: 0 0 0.6rem; }
+    .portada .cargo { font-size: 1.25rem; color: var(--acento); font-weight: 600; margin: 0 0 1.4rem; }
+    .portada .resumen { max-width: 38rem; color: var(--suave); font-size: 1.12rem; margin: 0 0 2rem; }
+    .acciones { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+    .btn { display: inline-block; padding: 0.7rem 1.3rem; border-radius: 0.35rem; font-weight: 600; text-decoration: none; border: 1.5px solid var(--acento); }
+    .btn-lleno { background: var(--acento); color: #fff; }
+    .btn-lleno:hover { background: var(--acento-oscuro); border-color: var(--acento-oscuro); }
+    .btn-borde { color: var(--acento); }
+    .btn-borde:hover { background: var(--panel); }
 
     section { padding: 3rem 0; border-top: 1px solid var(--linea); }
-    h2 { font-family: var(--titulos); font-size: 1.9rem; letter-spacing: -0.01em; margin: 0 0 1.5rem; }
+    section.gris { background: var(--panel); }
+    h2 { font-family: var(--serif); font-size: 1.7rem; line-height: 1.2; margin: 0 0 0.4rem; }
+    .intro { color: var(--suave); max-width: 38rem; margin: 0 0 1.8rem; }
 
-    .proyecto { display: grid; gap: 0.35rem 2rem; padding: 1.5rem 0; border-bottom: 1px solid var(--linea); }
-    .proyecto:first-of-type { padding-top: 0; }
-    .proyecto:last-of-type { border-bottom: 0; }
-    .proyecto h3 { font-family: var(--titulos); font-size: 1.35rem; margin: 0; }
-    .proyecto p { margin: 0; color: var(--suave); max-width: 38rem; }
-    .tecnologias { font-weight: 600; color: var(--tinta); }
-    .proyecto a { font-weight: 600; }
-    @media (min-width: 46rem) {
-      .proyecto { grid-template-columns: 14rem 1fr; align-items: start; }
-      .proyecto h3 { grid-row: span 3; }
-    }
+    .fila { display: grid; gap: 0.2rem 2.5rem; padding: 1.1rem 0; border-top: 1px solid var(--linea); }
+    .fila:first-of-type { border-top: 0; padding-top: 0.2rem; }
+    .fila h3 { font-family: var(--serif); font-size: 1.12rem; line-height: 1.35; margin: 0; }
+    .fila p { margin: 0; max-width: 38rem; }
+    .fila .tec { color: var(--suave); font-size: 0.95rem; margin-top: 0.25rem; }
+    @media (min-width: 46rem) { .fila { grid-template-columns: 15rem 1fr; } .fila h3 { grid-row: span 2; } }
 
-    .habilidades { display: flex; flex-wrap: wrap; gap: 0.6rem; list-style: none; margin: 0; padding: 0; }
-    .habilidades li { background: var(--acento-fondo); padding: 0.4rem 0.9rem; border-radius: 2rem; font-weight: 600; }
-    .aprendiendo { margin-top: 1.25rem; color: var(--suave); }
+    .practica { background: #fff; border-left: 4px solid var(--acento); padding: 1rem 1.25rem; max-width: 38rem; }
+    .practica p { margin: 0; }
 
-    footer { padding: 2.5rem 0 3rem; border-top: 1px solid var(--linea); color: var(--suave); }
+    footer { padding: 2rem 0 2.5rem; border-top: 1px solid var(--linea); color: var(--suave); font-size: 0.95rem; }
   </style>
 </head>
 <body>
   <header>
-    <nav class="contenedor" aria-label="Principal">
-      <strong>Irina</strong>
-      <ul>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
+    <div class="caja">
+      <strong>Liz Irina Llinin</strong>
+      <nav aria-label="Principal">
+        <ul>
+          <li><a href="#capacidades">Qué puedo hacer</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#herramientas">Herramientas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <div class="contenedor hero">
-      <h1>Hola, soy Irina.</h1>
-      <p>Tecnóloga en Desarrollo de Software. Desarrollo interfaces web responsive con HTML, CSS, JavaScript, Angular y React, y las conecto con APIs.</p>
-      <div class="botones">
-        <a class="btn btn-principal" href="#proyectos">Ver mis proyectos</a>
-        <a class="btn btn-secundario" href="#contacto">Contactarme</a>
+    <div class="caja portada">
+      <h1>Liz Irina Llinin Morocho</h1>
+      <p class="cargo">Desarrolladora Frontend</p>
+      <p class="resumen">Tecnóloga Superior en Desarrollo de Software. Desarrollo interfaces web responsive con HTML5, CSS3, JavaScript, Angular y React, las publico y las dejo funcionando en el servidor.</p>
+      <div class="acciones">
+        <a class="btn btn-lleno" href="#capacidades">Ver qué puedo hacer</a>
+        <a class="btn btn-borde" href="#contacto">Contactarme</a>
       </div>
     </div>
 
-    <section id="proyectos">
-      <div class="contenedor">
-        <h2>Proyectos</h2>
+    <section id="capacidades" class="gris">
+      <div class="caja">
+        <h2>Qué puedo hacer</h2>
+        <p class="intro">Cada punto está respaldado por algo que ya hice y que puedes revisar.</p>
 
-        <article class="proyecto">
-          <h3>ERP institucional YAVIRAC</h3>
-          <p>Sistema de gestión académica para la institución, desarrollado como proyecto de tesis. Incluye usuarios, carreras, mallas, periodos, matrículas y calificaciones, con permisos por roles.</p>
-          <p class="tecnologias">Angular, TypeScript, NestJS, PostgreSQL, JWT</p>
-        </article>
+        <div class="fila">
+          <h3>Maquetación responsive</h3>
+          <p>Interfaces que se adaptan a escritorio, tablet y celular. Este mismo sitio está hecho con HTML5, CSS3 y JavaScript, sin plantillas.</p>
+          <p class="tec">HTML5, CSS3, Sass, JavaScript</p>
+        </div>
+        <div class="fila">
+          <h3>Frameworks frontend</h3>
+          <p>Interfaces con Angular y TypeScript para un sistema académico, y una app móvil con React e Ionic.</p>
+          <p class="tec">Angular, React, Ionic, TypeScript</p>
+        </div>
+        <div class="fila">
+          <h3>Conexión con APIs y corrección de errores</h3>
+          <p>Consumo de APIs REST con autenticación JWT y permisos por roles. Reviso y corrijo errores con pruebas en Postman.</p>
+          <p class="tec">APIs REST, JWT, Postman</p>
+        </div>
+        <div class="fila">
+          <h3>Publicación de sitios</h3>
+          <p>Este portafolio está publicado con GitHub Pages sobre HTTPS, y cada cambio se sube con Git y GitHub.</p>
+          <p class="tec">Git, GitHub, GitHub Pages</p>
+        </div>
+        <div class="fila">
+          <h3>Servidores con Nginx</h3>
+          <p>Instalé y configuré Nginx en Ubuntu con dos sitios en puertos distintos. Valido la configuración con nginx -t, reviso los logs y pruebo las respuestas con curl.</p>
+          <p class="tec">Linux (Ubuntu), Nginx</p>
+        </div>
+        <div class="fila">
+          <h3>Mantenimiento web</h3>
+          <p>Desarrollo y mantenimiento de sitios web, SEO, análisis de palabras clave y configuración de servicios SMTP para una empresa.</p>
+        </div>
 
-        <article class="proyecto">
-          <h3>App de personajes</h3>
-          <p>Aplicación móvil que consume una API REST y muestra los datos con ordenamiento, paginación y tamaño de resultados. Mensajes directos con recordatorios de citas a whatsApp</p>
-          <p class="tecnologias">Ionic, React, API REST</p>
-        </article>
-
-        <article class="proyecto">
-          <h3>App de gestión de gastos</h3>
-          <p>Aplicación móvil educativa con pantallas de acceso, registro, gestión de gastos y reportes con gráficos.</p>
-          <p class="tecnologias">Flutter, Dart</p>
-        </article>
+        <div class="practica" style="margin-top:1.6rem">
+          <p>Ahora estoy practicando: VPS, DNS y certificados SSL.</p>
+        </div>
       </div>
     </section>
 
-    <section id="habilidades">
-      <div class="contenedor">
-        <h2>Habilidades</h2>
-        <ul class="habilidades">
-          <li>HTML5</li>
-          <li>CSS3 y Sass</li>
-          <li>JavaScript</li>
-          <li>TypeScript</li>
-          <li>Diseño responsive</li>
-          <li>Angular</li>
-          <li>React</li>
-          <li>Git y GitHub</li>
-          <li>GitHub Pages</li>
-          
-        </ul>
-        <p class="aprendiendo">Servidores VPS, Nginx, DNS y certificados SSL.</p>
+    <section id="proyectos">
+      <div class="caja">
+        <h2>Proyectos</h2>
+        <p class="intro">Tres trabajos donde se ve cómo construyo interfaces y las conecto con datos.</p>
+
+        <div class="fila">
+          <h3>ERP institucional YAVIRAC</h3>
+          <p>Sistema de gestión académica para la institución, hecho como proyecto de tesis. Maneja usuarios, carreras, mallas, periodos, matrículas y calificaciones, con permisos por roles.</p>
+          <p class="tec">Angular, TypeScript, NestJS, PostgreSQL, JWT</p>
+        </div>
+        <div class="fila">
+          <h3>App de personajes</h3>
+          <p>Aplicación móvil que consume una API REST y muestra los datos con ordenamiento, paginación y tamaño de resultados.</p>
+          <p class="tec">Ionic, React, API REST</p>
+        </div>
+        <div class="fila">
+          <h3>App de gestión de gastos</h3>
+          <p>Aplicación móvil educativa con pantallas de acceso, registro, gestión de gastos y reportes con gráficos.</p>
+          <p class="tec">Flutter, Dart</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="herramientas" class="gris">
+      <div class="caja">
+        <h2>Herramientas</h2>
+        <div class="fila">
+          <h3>Frontend</h3>
+          <p>HTML5, CSS3 y Sass, JavaScript, TypeScript, diseño responsive, Angular, React, Ionic</p>
+        </div>
+        <div class="fila">
+          <h3>Control de versiones</h3>
+          <p>Git, GitHub, GitHub Pages</p>
+        </div>
+        <div class="fila">
+          <h3>Servidores</h3>
+          <p>Linux (Ubuntu), Nginx, comandos básicos de terminal, revisión de logs</p>
+        </div>
+        <div class="fila">
+          <h3>Backend y datos</h3>
+          <p>Node.js, NestJS, PostgreSQL, SQL</p>
+        </div>
+        <div class="fila">
+          <h3>Formación</h3>
+          <p>Tecnología Superior en Desarrollo de Software, Instituto Superior Tecnológico Yavirac. Ingeniería en Desarrollo de Software en curso, UNIB.E.</p>
+        </div>
       </div>
     </section>
 
     <section id="contacto">
-      <div class="contenedor">
+      <div class="caja">
         <h2>Contacto</h2>
-        <p>¿Tienes un proyecto o una vacante? Escríbeme.</p>
-        <div class="botones">
-          <a class="btn btn-principal" href="mailto:lizllinin@gmail.com">lizllinin@gmail.com</a>
-          <!-- Cuando tengas el link de tu LinkedIn, agrega aquí un botón igual al de GitHub -->
-
-          <a class="btn btn-secundario" href="https://github.com/lizIrina" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn btn-secundario" href="https://wa.me/593990719366" target="_blank" rel="noopener">WhatsApp</a>
+        <p class="intro">Si tienes una vacante o un proyecto web, escríbeme o llámame.</p>
+        <div class="acciones">
+          <a class="btn btn-lleno" href="mailto:lizllinin@gmail.com">lizllinin@gmail.com</a>
+          <a class="btn btn-borde" href="tel:+593990719366">099 071 9366</a>
+          <a class="btn btn-borde" href="https://github.com/lizIrina" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="contenedor">Irina · Portafolio publicado con GitHub Pages</div>
+    <div class="caja">Liz Irina Llinin Morocho. Quito, Ecuador.</div>
   </footer>
 </body>
 </html>
